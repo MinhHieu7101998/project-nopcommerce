@@ -51,4 +51,7 @@ public class PageGeneratorManager {
 	public static ProductsAdminPageObject getProductsAdminPage(WebDriver driver) {
 		return new ProductsAdminPageObject(driver);
 	}
+	public static ProductNotebooksPageObject getProductNotebooksPage(WebDriver driver) {
+		return new ProductNotebooksPageObject(driver);
+	}
 }

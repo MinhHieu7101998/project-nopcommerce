@@ -53,4 +53,15 @@ public class HomePageObject extends AbstractPage {
 		return PageGeneratorManager.getSearchPage(driver);
 	}
 
+	public void hoverMouseToComputersLink() {
+		waitToElementVisible(driver, HomePageUI.COMPUTERS_TOP_MENU_LINK);
+		hoverMouseToElment(driver, HomePageUI.COMPUTERS_TOP_MENU_LINK);
+	}
+
+	public ProductNotebooksPageObject clickToNotebooksButton() {
+		waitToElementClickable(driver, HomePageUI.NOTEBOOKS_CHILD_COMPUTERS_TOP_MENU_LINK);
+		clickToElement(driver, HomePageUI.NOTEBOOKS_CHILD_COMPUTERS_TOP_MENU_LINK);
+		return PageGeneratorManager.getProductNotebooksPage(driver);
+	}
+	
 }
