@@ -59,4 +59,9 @@ public class ProductNotebooksPageObject extends AbstractPage {
 	public boolean isNextIconUndisplayed() {
 		return isElementUndisplayed(driver, ProductNotebooksPageUI.NEXT_ICON);
 	}
+
+	public void clickToProductByProductName(String productName) {
+		waitToElementClickable(driver, ProductNotebooksPageUI.DYNAMIC_PRODUCT_NAME, productName);
+		clickToElement(driver, ProductNotebooksPageUI.DYNAMIC_PRODUCT_NAME, productName);
+	}
 }

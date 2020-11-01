@@ -11,7 +11,7 @@
 	<test name="Run on CHROME UI">
 		<parameter name="browser" value="chrome_ui" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_05_Sort_Display_Paging" />
+			<class name="com.nopcommerce.user.Level_06_Wishlist_Compare_Recent_View" />
 		</classes>
 	</test>
 </suite>

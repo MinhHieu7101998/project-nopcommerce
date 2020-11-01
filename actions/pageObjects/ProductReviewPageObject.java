@@ -53,4 +53,20 @@ public class ProductReviewPageObject extends AbstractPage {
 		clickToElement(driver, ProductReviewPageUI.MY_ACCOUNT_LINK);
 		return PageGeneratorManager.getCustomerInfoPage(driver);
 	}
+
+
+	public String getNotification() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void clickToCloseNotificationButton() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public WishlistPageObject clickToWishlistHeaderLink() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

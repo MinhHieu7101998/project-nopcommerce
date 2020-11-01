@@ -28,6 +28,7 @@ import pageObjects.DownloadableProductsPageObject;
 import pageObjects.MyProductReviewsPageObject;
 import pageObjects.OrdersPageObject;
 import pageObjects.PageGeneratorManager;
+import pageObjects.ProductNotebooksPageObject;
 import pageObjects.RewardPointsPageObject;
 import pageUIs.AbstractPageUI;
 import ru.yandex.qatools.ashot.AShot;
@@ -297,6 +298,7 @@ public class AbstractPage {
 		element = getElement(driver, locator);
 		return element.getAttribute(attributeName);
 	}
+
 	protected String getElementAttribute(WebDriver driver, String locator, String attributeName, String... dynamicValues) {
 		locator = castRestParamter(locator, dynamicValues);
 		element = getElement(driver, locator);
@@ -666,7 +668,12 @@ public class AbstractPage {
 		clickToElement(driver, AbstractPageUI.REWARD_POINTS_LINK);
 		return PageGeneratorManager.getRewardPointsPage(driver);
 	}
-
+	
+	public void clickToRecentlyViewedProductsFooterLink(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.RECENTLY_VIEWED_PRODUCTS);
+		clickToElement(driver, AbstractPageUI.RECENTLY_VIEWED_PRODUCTS);
+	}
+	
 	public void inputToTextboxByID(WebDriver driver, String valueID, String valueInput) {
 		waitToElementVisible(driver, AbstractPageUI.DYANMIC_TEXTBOX_BY_ID, valueID);
 		sendkeyToELement(driver, AbstractPageUI.DYANMIC_TEXTBOX_BY_ID, valueInput, valueID);
@@ -730,8 +737,17 @@ public class AbstractPage {
 		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 	}
 
+	public ProductNotebooksPageObject backToPageNotebooks(WebDriver driver) {
+		backToPage(driver);
+		return PageGeneratorManager.getProductNotebooksPage(driver);
+	}
+
 	public void waitToAjaxLoadinIconInvisible(WebDriver driver) {
 		waitToElementInvisible(driver, AbstractPageUI.AJAX_LOADING_ICON);
+	}
+
+	public void waitToAjaxLoadingPageUserInvisble(WebDriver driver) {
+		waitToElementInvisible(driver, AbstractPageUI.AJAX_LOADING_PAGE_USER_ICON);
 	}
 
 	public boolean compareImageAshot(WebDriver driver, String locator, String fileName) throws IOException {

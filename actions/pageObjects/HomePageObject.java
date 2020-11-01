@@ -63,5 +63,34 @@ public class HomePageObject extends AbstractPage {
 		clickToElement(driver, HomePageUI.NOTEBOOKS_CHILD_COMPUTERS_TOP_MENU_LINK);
 		return PageGeneratorManager.getProductNotebooksPage(driver);
 	}
+
+	public ProductPageObject clickToProductByName(String productName) {
+		waitToElementClickable(driver, HomePageUI.PRODUCT_NAME_LINK, productName);
+		clickToElement(driver, HomePageUI.PRODUCT_NAME_LINK, productName);
+		return PageGeneratorManager.getProductPage(driver);
+	}
+
+	public void clickToAddToCompareListByProductName(String productName) {
+		waitToElementClickable(driver, HomePageUI.DYNAMIC_ADD_TO_COMPARE_LIST_BUTTON, productName);
+		clickToElement(driver, HomePageUI.DYNAMIC_ADD_TO_COMPARE_LIST_BUTTON, productName);
+		waitToAjaxLoadingPageUserInvisble(driver);
+	}
+
+	public String getAddToCompareListSuccessMessage() {
+		waitToElementVisible(driver, HomePageUI.NOTIFICATION_ADD_TO_COMAPRE_LIST_MESSAGE);
+		return getElementText(driver, HomePageUI.NOTIFICATION_ADD_TO_COMAPRE_LIST_MESSAGE);
+	}
+
+	public void clickToCloseMessage() {
+		waitToElementClickable(driver, HomePageUI.CLOSE_MEESAGE_BUTTON);
+		clickToElement(driver, HomePageUI.CLOSE_MEESAGE_BUTTON);
+	}
+
+	public CompareProductListPageObject clickToCompareProductsListFooterPage() {
+		waitToElementClickable(driver, HomePageUI.COMPARE_PRODUCT_LIST_LINK);
+		clickToElement(driver, HomePageUI.COMPARE_PRODUCT_LIST_LINK);
+		return PageGeneratorManager.getCompareProductListPage(driver);
+	}
+	
 	
 }

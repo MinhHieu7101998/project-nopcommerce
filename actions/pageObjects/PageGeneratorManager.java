@@ -54,4 +54,35 @@ public class PageGeneratorManager {
 	public static ProductNotebooksPageObject getProductNotebooksPage(WebDriver driver) {
 		return new ProductNotebooksPageObject(driver);
 	}
+	public static WishlistPageObject getWishlistPage(WebDriver driver) {
+		return new WishlistPageObject(driver);
+	}
+	public static WislistLinkSharingPageObject getWislistLinkSharingPage(WebDriver driver) {
+		return new WislistLinkSharingPageObject(driver);
+	}
+	public static ShoppingCartPageObject getShoppingCartPage(WebDriver driver) {
+		return new ShoppingCartPageObject(driver);
+	}
+	public static CompareProductListPageObject getCompareProductListPage(WebDriver driver) {
+		return new CompareProductListPageObject(driver);
+	}
+	public static ProductAppleMacbookProPageObject getProductAppleMacbookProPage(WebDriver driver) {
+		return new ProductAppleMacbookProPageObject(driver);
+	}
+	public static ProductAsusPageObject getProductAsusPage(WebDriver driver) {
+		return new ProductAsusPageObject(driver);
+	}
+	public static ProductHPPageObject getProductHPPage(WebDriver driver) {
+		return new ProductHPPageObject(driver);
+	}
+	public static ProductLenovoPageObject getProductLenovoPage(WebDriver driver) {
+		return new ProductLenovoPageObject(driver);
+	}
+	public static ProductSamsungPageObject getProductSamsungPage(WebDriver driver) {
+		return new ProductSamsungPageObject(driver);
+	}
+	public static RecentlyViewedProductsPageObject getRecentlyViewedProductsPage(WebDriver driver) {
+		return new RecentlyViewedProductsPageObject(driver);
+	}
+	
 }

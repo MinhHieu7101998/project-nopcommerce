@@ -18,4 +18,7 @@ public class AbstractPageUI {
 	public static final String DYNAMIC_DROPDOWN_BY_NAME = "//select[@name='%s']";
 	public static final String DYNAMIC_BUTTON_BY_VALUE = "//input[@value='%s']";
 	public static final String DYNAMIC_CHECKBOX_OR_RADIO_BUTTON_BY_ID = "//input[@id='%s']";
+	public static final String WISHLIST_HEADER_MENU_LINK = "//div[@class='header-links']//span[text()='Wishlist']";
+	public static final String AJAX_LOADING_PAGE_USER_ICON = "//div[@class='ajax-loading-block-window']";
+	public static final String RECENTLY_VIEWED_PRODUCTS = "//a[text()='Recently viewed products']";
 }
